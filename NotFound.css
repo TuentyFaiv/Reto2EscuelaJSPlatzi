@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #222831;
+  color: #eeeeee;
+}
+.header__img {
+  width: 200px;
+  height: 50px;
+  margin: 10px 20px;
+  object-fit: cover;
+}
+.header__img:hover {
+  cursor: pointer;
+}
+
+.error404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 140px);
+  background-color: #393e46;
+  flex-direction: column;
+}
+.error404__title {
+  font-size: 100px;
+  color: #d65a31;
+  animation: pulso 2s ease-in-out infinite;
+}
+.error404__subtitle {
+  font-size: 50px;
+  color: #eeeeee;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 70px;
+  background-color: #222831;
+  color: #eeeeee;
+}
+.footer__links {
+  margin-right: 50px;
+}
+.footer a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #eeeeee;
+}
+.footer a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/*# sourceMappingURL=NotFound.css.map */

@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+
+$color-primario: #222831;
+$color-secundario: #393e46;
+$color-alternativo: #d65a31;
+$color-claro: #eeeeee;
+$Fuente1: "Oswald", sans-serif;
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $Fuente1;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: $color-primario;
+  color: $color-claro;
+  &__img {
+    width: 200px;
+    height: 50px;
+    margin: 10px 20px;
+    object-fit: cover;
+  }
+  &__img:hover {
+    cursor: pointer;
+  }
+}
+
+.error404 {
+  @include flex(center, center);
+  width: 100%;
+  height: calc(100vh - 140px);
+  background-color: $color-secundario;
+  flex-direction: column;
+  &__title {
+    font-size: 100px;
+    color: $color-alternativo;
+    animation: pulso 2s ease-in-out infinite;
+  }
+  &__subtitle {
+    font-size: 50px;
+    color: $color-claro;
+  }
+}
+
+.footer {
+  @include flex(center, flex-end);
+  width: 100%;
+  height: 70px;
+  background-color: $color-primario;
+  color: $color-claro;
+  &__links {
+    margin-right: 50px;
+  }
+  & a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: $color-claro;
+  }
+  & a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
